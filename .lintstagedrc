@@ -1,0 +1,7 @@
+{
+  "*.ts": [
+    "prettier --write",
+    "import-sort --write",
+    "git add"
+  ]
+}

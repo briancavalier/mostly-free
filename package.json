@@ -1,0 +1,37 @@
+{
+  "name": "typed",
+  "description": "Strongly-typed Web Applications",
+  "version": "0.0.0",
+  "repository": "https://github.com/typed/typed.ts",
+  "license": "MIT",
+  "author": "Tylor Steinberger <tlsteinberger167@gmail.com>",
+  "scripts": {
+    "precommit": "lint-staged",
+    "lint:prettier": "prettier --write --config .prettierrc 'src/**/*.ts'",
+    "lint:import": "import-sort --write 'src/**/*.ts'",
+    "build": "tsc -P tsconfig.json --outDir lib"
+  },
+  "importSort": {
+    ".ts, .tsx": {
+      "parser": "typescript",
+      "style": "module"
+    }
+  },
+  "devDependencies": {
+    "babel-core": "6.26.0",
+    "babel-plugin-annotate-pure-calls": "0.2.2",
+    "husky": "0.14.3",
+    "import-sort-cli": "4.2.0",
+    "import-sort-parser-typescript": "4.2.0",
+    "import-sort-style-module": "4.2.0",
+    "lint-staged": "6.0.1",
+    "prettier": "1.10.2",
+    "rollup": "0.54.1",
+    "rollup-plugin-babel": "3.0.3",
+    "rollup-plugin-node-resolve": "3.0.2",
+    "rollup-plugin-typescript2": "0.11.0",
+    "ts-node": "^4.1.0",
+    "typescript": "2.7.1"
+  },
+  "dependencies": {}
+}
