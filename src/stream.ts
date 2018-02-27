@@ -1,4 +1,4 @@
-import { Eff, pureEff } from './eff'
+import { Eff, pureEff, liftA2Eff } from './eff'
 
 export type Time = number
 
@@ -82,9 +82,7 @@ export const merge = <E1, E2, A, R> (s1: Stream<E1, A, R>, s2: Stream<E2, A, R>)
 
 class Merge<E1, E2, A, R> implements RunTwoToOne<E1, E2, A, A, A, R> {
   run (s1: Stream<E1, A, R>, s2: Stream<E2, A, R>, s: Sink<A>): Eff<E1 & E2, R> {
-    // TODO: implement for real
-    // Just make the types work for now
-    return s2.run(s)
+    return liftA2Eff((r1: R, r2: R) => r1, s1.run(s), s2.run(s))
   }
 }
 
