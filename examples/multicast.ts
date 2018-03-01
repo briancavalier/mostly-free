@@ -58,16 +58,8 @@ const applyMulticast = <E, A, R> ({ edges, state }: MState): ((s: Stream<E, A, R
 
 const edges = analyze(findEdges, m, s)
 
-const mstate = { edges, state: new Map() }
+const ss = compile(applyMulticast({ edges, state: new Map() }), s) as Stream<{}, number, number>
 
 console.log(s)
 
-const ss = compile(applyMulticast(mstate), s) as Stream<{}, number, number>
-
 console.log(ss)
-
-// for (const [k, ss] of edges) {
-//   if (ss.size > 1) {
-//     console.log('multicast', k)
-//   }
-// }
