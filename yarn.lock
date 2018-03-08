@@ -2,6 +2,21 @@
 # yarn lockfile v1
 
 
+"@most/prelude@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@most/prelude/-/prelude-1.7.0.tgz#0956ed464ad03e7fc95143eac0c6dd028498d975"
+
+"@most/scheduler@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@most/scheduler/-/scheduler-1.1.0.tgz#36d6bf8d166a637c7c16eeb4fbe6946302b7a8c9"
+  dependencies:
+    "@most/prelude" "^1.7.0"
+    "@most/types" "^1.0.0"
+
+"@most/types@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@most/types/-/types-1.0.0.tgz#5c301d2437342a1b82e38463fdb94e1bafe2c6d9"
+
 "@types/events@*":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@types/events/-/events-1.1.0.tgz#93b1be91f63c184450385272c47b6496fd028e02"
